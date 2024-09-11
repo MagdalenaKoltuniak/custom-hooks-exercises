@@ -1,3 +1,3 @@
 export const useDebouncedState = () => {
-    // const []
-}
+  // const []
+};

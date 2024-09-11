@@ -1,20 +1,22 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export const useNumbers = () => {
-	const [numbers, setNumbers] = useState<number[]>([]);
+  const [numbers, setNumbers] = useState<number[]>([]);
 
-	const generateNumber = () => {
-		const newNumber = Math.round(Math.random() * 100000);
-		setNumbers(prevNumbers => [...prevNumbers, newNumber]);
-	};
+  const generateNumber = () => {
+    const newNumber = Math.round(Math.random() * 100000);
+    setNumbers((prevNumbers) => [...prevNumbers, newNumber]);
+  };
 
-	const deleteNumber = (indexToDelete: number) => {
-		setNumbers(prevNumbers => prevNumbers.filter((el, index) => index !== indexToDelete));
-	};
+  const deleteNumber = (indexToDelete: number) => {
+    setNumbers((prevNumbers) =>
+      prevNumbers.filter((_, index) => index !== indexToDelete),
+    );
+  };
 
-	return {
-		numbers,
-		generateNumber,
-		deleteNumber,
-	};
+  return {
+    numbers,
+    generateNumber,
+    deleteNumber,
+  };
 };

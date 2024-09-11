@@ -1,9 +1,9 @@
 // import { Numbers } from './Numbers';
-import { RandomColor } from './RandomColor';
+import { RandomColor } from "./RandomColor";
 // import { useCounter } from './hooks/useCounter';
 
 const App = () => {
-	return <RandomColor />;
+  return <RandomColor />;
 };
 
 export { App };

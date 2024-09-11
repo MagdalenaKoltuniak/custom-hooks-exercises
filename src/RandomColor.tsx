@@ -1,16 +1,17 @@
-import { useRandomColor } from './hooks/useRandomColor';
+import { useRandomColor } from "./hooks/useRandomColor";
 
 export const RandomColor = () => {
-	const color = useRandomColor('light');
+  const color = useRandomColor("light");
 
-	if (!color) return null;
+  if (!color) return null;
 
-	return (
-		<div
-			style={{
-				width: 300,
-				height: 300,
-				backgroundColor: color,
-			}}></div>
-	);
+  return (
+    <div
+      style={{
+        width: 300,
+        height: 300,
+        backgroundColor: color,
+      }}
+    ></div>
+  );
 };
